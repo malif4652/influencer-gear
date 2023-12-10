@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap');
+
+/* utilities */
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+    color: #3a3a3a;
+}
+
+a{
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+ul, li{
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+button{
+    background-color: #E02C6D;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+}
+
+/* header */
+header{
+    display: grid;
+    grid-template-areas:
+    "site-title text-menu i-menu";
+    align-items: center;
+    height: 120px;
+}
+
+header>.site-title{
+    grid-area: site-title;
+    width: 700px;
+}
+
+header>.text-menu{
+    grid-area: text-menu;
+    width: 380px;
+}
+
+header>.i-menu{
+    grid-area: i-menu;
+    width: 120px;
+    color: #000000;
+}
+
+header nav ul{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-bar{
+    display: none;
+}
+
+
+
+/* hero section  */
+h1{
+    font-size: 52px;
+    margin-bottom: -15px;
+}
+.hero-section{
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+.hero-section .split1{
+    width: 50%;
+}
+.hero-section .split2{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-section .split2 img{
+    border: 1px solid #F1E4FF;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #F1E4FF;
+}
+
+
+
+/* responsive */
+
+
+/* mobile */
+@media only screen and (max-width:768px) {
+    body{
+        width: 90vw;
+    }
+
+    /* header */
+    header{
+        grid-template-areas:
+        "text-menu site-title i-menu";
+        justify-content: center;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .text-menu li:not(:first-child){
+        display: none;
+    }
+
+    .menu-bar{
+        display: block;
+    }
+    
+    .text-menu ul:first-child{
+        justify-content: flex-start;
+    }
+    .i-menu ul:last-child{
+        justify-content: flex-end;
+    }
+
+    header>.site-title{
+        width: 50vw;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    header>.text-menu{
+        width: 20vw;
+    }
+    
+    header>.i-menu{
+        width: 20vw;
+    }
+
+
+    /* hero section */
+
+    .hero-section{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .hero-section .split1{
+        width: 100%;
+        text-align: center;
+    }
+    .hero-section .split2{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-section .split2 img{
+        width: 100%;
+        text-align: center;
+    }
+}
