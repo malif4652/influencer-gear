@@ -126,8 +126,71 @@ header nav ul {
 
 }
 
+/* popular */
+.popular-flex{
+    display: flex;
+    justify-content: center;
+}
+.popular{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 1110px;
+    padding: 40px 0;
+}
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+    border: 1px solid #c4c4c498;
+    border-radius: 10px;
+}
+.product-grid:hover{
+    box-shadow: 1px -2px 34px -10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px -2px 34px -10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px -2px 34px -10px rgba(0, 0, 0, 0.3);
+    transition: .5s ease;
+    
+}
 
+.product-grid .product-title{
+    font-size: 28px;
+    margin: 0;
+}
+.product-grid .product-price{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    color: #3a3a3a;
+    font-family: 'Inter';
+}
+.product-grid >p{
+    margin: 0;
+    font-weight: 600;
+    color: #555555;
+    font-family: 'Inter';
+}
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 30px;
 
+}
+
+#filled{
+    color: #FB8200 !important;
+}
+#empty{
+    color: #E5E5E5 !important;
+}
+
+.popular-flex button{
+    color: #E02C6D;
+    background-color: #00000000;
+    padding: 0;
+}
 /* featured */
 .featured {
     display: flex;
@@ -143,6 +206,7 @@ header nav ul {
 .featured .split2 {
     width: 50%;
 }
+
 
 
 
@@ -193,8 +257,6 @@ responsive
 @media only screen and (max-width:768px) {
 
     /* utitilities */
-    body {}
-
     .container {
         width: 100%;
         margin: 0;
@@ -281,9 +343,16 @@ responsive
 
     }
 
+    /* popular  */
+
+    .popular{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    
     /* featured */
     .featured {
-        
+
         height: auto;
         text-align: center;
         align-items: center;
@@ -291,14 +360,15 @@ responsive
         gap: 20px;
     }
 
-    .featured .split1{
-        width: 100%;
-    }
-    .featured .split2{
+    .featured .split1 {
         width: 100%;
     }
 
-    .featured img{
+    .featured .split2 {
+        width: 100%;
+    }
+
+    .featured img {
         width: 100%;
     }
 
