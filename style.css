@@ -190,6 +190,7 @@ header nav ul {
     color: #E02C6D;
     background-color: #00000000;
     padding: 0;
+    font-weight: 600;
 }
 /* featured */
 .featured {
