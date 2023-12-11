@@ -93,6 +93,23 @@ h1{
 }
 
 
+/* sponsor  */
+
+
+.sponsor{
+    display: flex;
+    justify-content: center;
+    width: 1110px;
+    padding: 60px 0;
+}
+.sponsors{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    
+
+}
+
 
 /* responsive */
 
@@ -164,5 +181,15 @@ h1{
     .hero-section .split2 img{
         width: 100%;
         text-align: center;
+    }
+
+    /* sponsor */
+    .sponsor{
+        width: 100%;
+    }
+    .sponsors{
+        flex-wrap: wrap;
+        justify-content: center;
+    
     }
 }
